@@ -2,64 +2,86 @@
 <html lang="en">
     
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Segurança da Informação</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segurança da Informação</title>
 
 <style>
 
-    header 
-	{
-  background-color: #4B0082;
+/* BASE */
+body {
+  background-color: #000000;
+  color: #00FF00;
+  font-family: "Courier New", monospace;
+  
+}
+
+/* HEADER */
+header {
+  background-color: #003300;
   padding: 30px;
   text-align: center;
   font-size: 35px;
-  color: white;
-	}
+  color: #00FF00;
+  text-shadow: 0 0 10px #00FF00;
+  border-bottom: 2px solid #00FF00;
+}
 
-nav 
-	{
+/* MENU */
+nav {
+  font-family: "Consolas", monospace;
   float: left;
   width: 20%;
   height: 600px; 
-  background: #9370DB;
+  background: #0d0d0d;
   padding: 30px;
-	}
+  border-right: 2px solid #00FF00;
+}
 
-nav ul 
-	{
+nav ul {
   list-style-type: none;
   padding: 0;
-	}
+}
 
-  nav ul li {
-            margin-bottom: 15px; /* Espaço entre um botão e outro */
-        }
+nav h1 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  color:#33FF33;
+}
 
-        nav ul li a {
-            display: block; /* Faz o link ocupar a largura toda do menu */
-            background-color: #4B0082; /* Cor de fundo do botão */
-            color: white;
-            text-decoration: none; /* Remove o sublinhado */
-            padding: 12px;
-            text-align: center;
-            border-radius: 8px; /* Arredonda os cantos */
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            transition: 0.3s; /* Deixa a transição de cor suave */
-        }
+/* BOTÕES */
+nav ul li {
+  margin-bottom: 15px;
+}
 
-        nav ul li a:hover {
-            background-color: #6A5ACD; /* Cor que aparece ao passar o mouse */
-            transform: scale(1.05); /* Aumenta levemente o botão */
-        }
+nav ul li a {
+  display: block;
+  background-color: #001a00;
+  color: #00FF00;
+  text-decoration: none;
+  padding: 12px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid #00FF00;
+  transition: 0.3s;
+}
 
+nav ul li a:hover {
+  background-color: #00FF00;
+  color: black;
+  box-shadow: 0 0 10px #00FF00;
+  transform: scale(1.05);
+}
+
+/* CONTEÚDO */
 article {
   float:left;
   padding: 30px;
   width: 73%;
-  background-color: #ffffff;
-  height: 600px; 
+  background-color: #000000;
+  height: 600px;
+  border-left: 2px solid #00FF00;
 }
 
 article iframe {
@@ -69,20 +91,24 @@ article iframe {
   display: none;
 }
 
+/* CLEAR */
 section::after {
   content: "";
   display: table;
   clear: both;
 }
 
+/* FOOTER */
 footer {
-  background-color: #4B0082;
+  background-color: #003300;
   padding: 10px;
   text-align: center;
-  color: white;
+  color: #00FF00;
+  border-top: 2px solid #00FF00;
+  font-weight: bold;
 }
 
-
+/* RESPONSIVO */
 @media (max-width: 600px) {
   nav, article {
     width: 100%;
@@ -90,50 +116,52 @@ footer {
   }
 }
 
-    </style>
+</style>
 </head>
 
- <body>
+<body>
 
 <header>
-<h2 style="font-family:fantasy;">Segurança da Informação</h2>
+<h1 style="font-family: 'Courier New', Courier, monospace;">Segurança da Informação</h1>
 </header>
 
 <section>
   <nav>
     <ul>
-      <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Menu</h1>
-      <li><a href="#" target="seguranca" onclick="voltarInicio()"> Tela Inicial</a></li>
+      <h1 style="font-family: Share;">Menu</h1>
+      <li><a href="#" onclick="voltarInicio()">Tela Inicial</a></li>
       <li><a href="https://solides.com.br/blog/seguranca-da-informacao/" target="seguranca" onclick="mostrarConteudo()">O que é Segurança da Informação?</a></li>
       <li><a href="https://pronnus.com.br/blog/triade-cia/" target="seguranca" onclick="mostrarConteudo()">CIA</a></li>
       <li><a href="https://ibsec.com.br/quais-sao-os-5-pilares-da-seguranca-da-informacao/" target="seguranca" onclick="mostrarConteudo()">Pilares de Segurança</a></li>
+      <li><a href="https://www.alura.com.br/artigos/etica-e-inteligencia-artificial" target="seguranca" onclick="mostrarConteudo()">Ética e IA</a></li>
+      <li><a href="https://www.dio.me/articles/como-pensar-como-um-hacker-3-ataques-mais-conhecidos" target="seguranca" onclick="mostrarConteudo()">Como os hackers pensam?</a></li>
     </ul>
   </nav>
   
-  
   <article>
-    <img id="imagemInicial" src="image/10-dicas-preciosas-de-seguranca-da-informacao.webp" alt="100%" height="100%" width="102%">
-    <iframe name="seguranca" src="about:blank"></iframe>
+    <img id="imagemInicial" src="image/Plano de fundo.png" alt="100%" height="100%" width="102%">
+    <iframe name="seguranca"></iframe>
   </article>
 </section>
 
 <script>
-  function mostrarConteudo() {
-    document.getElementById("imagemInicial").style.display = "none";
-    document.querySelector("iframe").style.display = "block";
-  }
+function mostrarConteudo() {
+  document.getElementById("imagemInicial").style.display = "none";
+  document.querySelector("iframe").style.display = "block";
+}
 
-  function voltarInicio() {
-    document.getElementById("imagemInicial").style.display = "block";
-    document.querySelector("iframe").style.display = "none";
-    document.querySelector("iframe").src = "about:blank";
-  }
-  </script>
+function voltarInicio() {
+  document.getElementById("imagemInicial").style.display = "block";
+  document.querySelector("iframe").style.display = "none";
+  document.querySelector("iframe").src = "about:blank";
+}
+</script>
 
 <footer>
   <p>Bianca dos Santos</p>
   <p>1 DS - Noturno</p>
 </footer>
- </body>   
+
+</body>   
 
 </html>
