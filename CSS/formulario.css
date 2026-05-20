@@ -1,0 +1,179 @@
+/* Configurações Globais - Fundo Preto Absoluto */
+body {
+    background-color: #000000;
+    color: #00ff66; /* Verde Neon */
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita barras de rolagem estranhas com os presentes */
+    position: relative;
+}
+
+/* Estilização dos Presentes ao redor da tela */
+.presente-decorativo {
+    position: absolute;
+    font-size: 40px;
+    opacity: 0.7;
+    user-select: none;
+    transition: all 0.5s ease;
+    animation: flutuar 4s ease-in-out infinite alternate;
+}
+
+/* Posicionamento estratégico dos presentes (ao redor do formulário) */
+.p1 { top: 10%; left: 10%; animation-delay: 0s; }
+.p2 { top: 15%; right: 12%; animation-delay: 0.5s; }
+.p3 { bottom: 15%; left: 8%; animation-delay: 1s; }
+.p4 { bottom: 12%; right: 10%; animation-delay: 1.5s; }
+.p5 { top: 45%; left: 5%; animation-delay: 0.7s; }
+.p6 { top: 50%; right: 6%; animation-delay: 1.2s; }
+
+/* Container Principal do Formulário */
+.box-container {
+    background-color: #0d0d0d;
+    border: 2px solid #00ff66;
+    box-shadow: 0 0 30px rgba(0, 255, 102, 0.2);
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 650px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10; /* Garante que o formulário fique na frente dos ícones */
+}
+
+/* Títulos da Tela 1 (O Golpe do iPhone) */
+#formulario h1 {
+    color: #00ff66;
+    text-shadow: 0 0 10px rgba(0, 255, 102, 0.5);
+    font-size: 28px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#formulario h2 {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #00ff66;
+    padding-bottom: 20px;
+}
+
+/* Estilização dos Inputs e Labels */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px;
+    background-color: #050505;
+    border: 1px solid #00ff66;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.7);
+    background-color: #0a0a0a;
+}
+
+.radio-group {
+    margin: 10px 0;
+    color: #ffffff;
+}
+
+/* Botão de Envio Fake */
+.btn-submit {
+    width: 100%;
+    background-color: #00ff66;
+    color: #000000;
+    border: none;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
+}
+
+.btn-submit:hover {
+    background-color: #ffffff;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    transform: scale(1.01);
+}
+
+/* ==========================================
+   TELA 2: ESTILO INFECTADO / VAZAMENTO
+   ========================================== */
+   
+.tela-vazamento {
+    border: 2px solid #ff003c !important;
+    box-shadow: 0 0 40px rgba(255, 0, 60, 0.6) !important;
+    background-color: #0a0003 !important;
+    animation: tremer 0.15s infinite alternate;
+}
+
+/* Classe que transforma os presentes em alertas vermelhos no JavaScript */
+.presente-destruido {
+    opacity: 1 !important;
+    filter: drop-shadow(0 0 10px #ff003c);
+    animation: tremer 0.1s infinite alternate !important;
+}
+
+#sucesso h1 {
+    color: #ff003c;
+    font-size: 45px;
+    margin-top: 0;
+    text-shadow: 0 0 15px rgba(255, 0, 60, 0.8);
+}
+
+#sucesso h2 {
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 1.4;
+    margin: 25px 0;
+}
+
+#sucesso h3 {
+    color: #ffaa00;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.6;
+    border-top: 1px solid #ff003c;
+    padding-top: 20px;
+}
+
+/* Animações */
+@keyframes flutuar {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-15px); }
+}
+
+@keyframes tremer {
+    0% { transform: translate(1px, 1px); }
+    100% { transform: translate(-1px, -1px); }
+}

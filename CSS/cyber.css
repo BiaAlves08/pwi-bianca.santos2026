@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  color: #00FF00;
+  font-family: "Courier New", monospace;
+  margin: 0;
+}
+
+/* HEADER */
+header {
+  background-color: #003300;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: #00FF00;
+  text-shadow: 0 0 10px #00FF00;
+  border-bottom: 2px solid #00FF00;
+}
+
+/* MENU HORIZONTAL NO TOPO */
+nav {
+  font-family: "Consolas", monospace;
+  width: 100%;
+  background: #0d0d0d;
+  padding: 15px 20px;
+  border-bottom: 2px solid #00FF00;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 5px 8px;
+}
+
+nav ul li a {
+  display: inline-block;
+  background-color: #001a00;
+  color: #00FF00;
+  text-decoration: none;
+  padding: 10px 16px;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  border: 1px solid #00FF00;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+nav ul li a:hover {
+  background-color: #00FF00;
+  color: black;
+  box-shadow: 0 0 10px #00FF00;
+  transform: scale(1.05);
+}
+
+/* CONTEÚDO PRINCIPAL */
+article {
+  padding: 60px 40px;
+  width: 100%;
+  background-color: #000000;
+  min-height: 600px; /* Mudado para min-height para acomodar o painel se a tela esticar */
+}
+
+article iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  display: none;
+}
+
+/* ==========================================
+   ESTILOS DO NOVO PAINEL EM TEMPO REAL
+   ========================================== */
+
+.hero-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero-header h2 {
+  font-family: 'Consolas', monospace;
+  color: #00FF00;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.hero-header p {
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 15px;
+}
+
+.painel-ameacas {
+  background-color: #080808;
+  border: 2px solid #00FF00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
+  border-radius: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.titulo-painel {
+  background-color: #001a00;
+  padding: 12px;
+  font-weight: bold;
+  border-bottom: 1px solid #00FF00;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+/* Simula colunas para os cartões de status sem usar flexbox/grid banidos */
+.grid-status {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 15px;
+  padding: 10px;
+}
+
+.status-card {
+  display: table-cell;
+  background-color: #020202;
+  border: 1px solid #336633;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 4px;
+  vertical-align: top;
+}
+
+.status-label {
+  display: block;
+  font-size: 11px;
+  color: #ffffff;
+  opacity: 0.7;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.status-numero {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 10px;
+  font-family: 'Consolas', monospace;
+}
+
+/* Cores específicas de alerta do painel */
+.alerta .status-numero {
+  color: #ffaa00;
+  text-shadow: 0 0 8px rgba(255, 170, 0, 0.4);
+}
+
+.perigo .status-numero {
+  color: #ff003c;
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.4);
+}
+
+.info .status-numero {
+  color: #00FF00;
+}
+
+.painel-rodape {
+  background-color: #050505;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px dashed #336633;
+  color: #888888;
+}
+
+/* Animação da bolinha piscando */
+.piscar {
+  color: #ff003c;
+  font-size: 14px;
+  animation: efeito-piscar 1s infinite alternate;
+}
+
+@keyframes efeito-piscar {
+  0% { opacity: 0.2; }
+  100% { opacity: 1; }
+}
+
+/* FOOTER */
+footer {
+  background-color: #003300;
+  padding: 10px;
+  text-align: center;
+  color: #00FF00;
+  border-top: 2px solid #00FF00;
+  font-weight: bold;
+  margin-top: 30px;
+}

@@ -1,134 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Segurança da Informação</title>
-
-<style>
-
-/* BASE */
-body {
-  background-color: #000000;
-  color: #00FF00;
-  font-family: "Courier New", monospace;
-  
-}
-
-/* HEADER */
-header {
-  background-color: #003300;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: #00FF00;
-  text-shadow: 0 0 10px #00FF00;
-  border-bottom: 2px solid #00FF00;
-}
-
-/* MENU */
-nav {
-  font-family: "Consolas", monospace;
-  float: left;
-  width: 20%;
-  height: 600px; 
-  background: #0d0d0d;
-  padding: 30px;
-  border-right: 2px solid #00FF00;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-nav h1 {
-  font-family: "Orbitron", sans-serif;
-  font-weight: bold;
-  color:#33FF33;
-}
-
-/* BOTÕES */
-nav ul li {
-  margin-bottom: 15px;
-}
-
-nav ul li a {
-  display: block;
-  background-color: #001a00;
-  color: #00FF00;
-  text-decoration: none;
-  padding: 12px;
-  text-align: center;
-  border-radius: 5px;
-  font-weight: bold;
-  border: 1px solid #00FF00;
-  transition: 0.3s;
-}
-
-nav ul li a:hover {
-  background-color: #00FF00;
-  color: black;
-  box-shadow: 0 0 10px #00FF00;
-  transform: scale(1.05);
-}
-
-/* CONTEÚDO */
-article {
-  float:left;
-  padding: 30px;
-  width: 73%;
-  background-color: #000000;
-  height: 600px;
-  border-left: 2px solid #00FF00;
-}
-
-article iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: none;
-}
-
-/* CLEAR */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* FOOTER */
-footer {
-  background-color: #003300;
-  padding: 10px;
-  text-align: center;
-  color: #00FF00;
-  border-top: 2px solid #00FF00;
-  font-weight: bold;
-}
-
-/* RESPONSIVO */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Segurança da Informação</title>
+  <link rel="stylesheet" href="CSS/cyber.css">
 </head>
 
 <body>
 
 <header>
-<h1 style="font-family: 'Courier New', Courier, monospace;">Segurança da Informação</h1>
+  <h1 style="font-family: 'Courier New', Courier, monospace;">Segurança da Informação</h1>
 </header>
 
 <section>
   <nav>
     <ul>
-      <h1 style="font-family: Share;">Menu</h1>
       <li><a href="#" onclick="voltarInicio()">Tela Inicial</a></li>
       <li><a href="https://solides.com.br/blog/seguranca-da-informacao/" target="seguranca" onclick="mostrarConteudo()">O que é Segurança da Informação?</a></li>
       <li><a href="https://pronnus.com.br/blog/triade-cia/" target="seguranca" onclick="mostrarConteudo()">CIA</a></li>
@@ -136,27 +24,112 @@ footer {
       <li><a href="https://www.alura.com.br/artigos/etica-e-inteligencia-artificial" target="seguranca" onclick="mostrarConteudo()">Ética e IA</a></li>
       <li><a href="https://www.dio.me/articles/como-pensar-como-um-hacker-3-ataques-mais-conhecidos" target="seguranca" onclick="mostrarConteudo()">Como os hackers pensam?</a></li>
       <li><a href="formulario.html" target="seguranca" onclick="mostrarConteudo()">Simulação de Vazamento de Dados</a></li>
-      <li><a href="https://youtube.com/embed/NBPOCB05o9E" target="seguranca" onclick="mostrarConteudo()">Vídeo - Cybersegurança (Profissão)</a></li>
+      <!-- Link do vídeo corrigido para chamar a função JavaScript apropriada -->
+      <li><a href="#" onclick="mostrarVideo('image/YTDown_YouTube_Media_NBPOCB05o9E_006_144p.mp4')">Vídeo - Cybersegurança (Profissão)</a></li>
     </ul>
   </nav>
   
   <article>
-    <img id="imagemInicial" src="image/Plano de fundo.png" alt="100%" height="100%" width="102%">
-    <iframe name="seguranca"></iframe>
+    <!-- Tela Inicial -->
+    <div id="imagemInicial">
+      <div class="hero-header">
+        <h2>SISTEMA DE MONITORAMENTO DE VULNERABILIDADES</h2>
+        <p>No ambiente digital, a ignorância é a maior brecha de segurança. Monitore as ameaças abaixo:</p>
+      </div>
+
+      <div class="painel-ameacas">
+        <div class="titulo-painel">📡 GLOBAL THREAT STATUS: ACTIVE</div>
+        
+        <div class="grid-status">
+          <div class="status-card alerta">
+            <span class="status-label">ATAQUES DE PHISHING HOJE</span>
+            <span class="status-numero" id="contador-phishing">142.305</span>
+          </div>
+          
+          <div class="status-card perigo">
+            <span class="status-label">DADOS VAZADOS / SEGUNDO</span>
+            <span class="status-numero" id="contador-vazamentos">1.840</span>
+          </div>
+          
+          <div class="status-card info">
+            <span class="status-label">MAIOR VETOR DE ATAQUE</span>
+            <span class="status-numero" style="font-size: 20px; color: #ffaa00; margin-top: 15px;">ENGENHARIA SOCIAL</span>
+          </div>
+        </div>
+
+        <div class="painel-rodape">
+          <span class="piscar">●</span> SISTEMA OPERANDO EM MODO DE ALERTA GERAL
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px; font-size: 14px; color: #66ff66; opacity: 0.8;">
+        [ SELECIONE UM TÓPICO NO MENU SUPERIOR PARA REUNIR INFORMAÇÕES E SE PROTEGER ]
+      </div>
+    </div>
+
+    <!-- Iframe para os links externos e formulário -->
+    <iframe name="seguranca" style="display: none;"></iframe>
+
+    <!-- Player nativo de vídeo (reproduz o arquivo MP4 perfeitamente) -->
+    <video id="playerVideo" controls style="display: none; width: 100%; max-height: 500px; margin-top: 20px; background: #000;">
+      <source id="videoSource" src="" type="video/mp4">
+      Seu navegador não suporta a reprodução de vídeos.
+    </video>
   </article>
 </section>
 
 <script>
+// Exibe o iframe e esconde o resto
 function mostrarConteudo() {
   document.getElementById("imagemInicial").style.display = "none";
+  
+  // Pausa e esconde o vídeo caso ele esteja aberto
+  const video = document.getElementById("playerVideo");
+  video.style.display = "none";
+  video.pause();
+
   document.querySelector("iframe").style.display = "block";
 }
 
+// Controla a exibição do player de vídeo local
+function mostrarVideo(caminhoVideo) {
+  document.getElementById("imagemInicial").style.display = "none";
+  document.querySelector("iframe").style.display = "none"; 
+  
+  const video = document.getElementById("playerVideo");
+  const source = document.getElementById("videoSource");
+  
+  // Atualiza o arquivo de origem e recarrega o player
+  source.src = caminhoVideo;
+  video.load(); 
+  video.style.display = "block";
+  video.play(); // Inicia o vídeo automaticamente ao clicar
+}
+
+// Reseta a tela para o painel principal
 function voltarInicio() {
   document.getElementById("imagemInicial").style.display = "block";
   document.querySelector("iframe").style.display = "none";
   document.querySelector("iframe").src = "about:blank";
+  
+  const video = document.getElementById("playerVideo");
+  video.style.display = "none";
+  video.pause();
 }
+
+/* SCRIPT PARA FAZER OS NÚMEROS AUMENTAREM EM TEMPO REAL */
+let phishingAtakes = 142305;
+let dadosVazados = 1840;
+
+setInterval(() => {
+  // Sorteia um incremento aleatório para simular dinamismo
+  phishingAtakes += Math.floor(Math.random() * 5) + 1;
+  dadosVazados += Math.floor(Math.random() * 12) + 3;
+
+  // Atualiza os elementos na tela com formatação de pontos decimais
+  document.getElementById('contador-phishing').innerText = phishingAtakes.toLocaleString('pt-BR');
+  document.getElementById('contador-vazamentos').innerText = dadosVazados.toLocaleString('pt-BR');
+}, 1500); // Roda a cada 1.5 segundos
 </script>
 
 <footer>
@@ -165,5 +138,4 @@ function voltarInicio() {
 </footer>
 
 </body>   
-
 </html>
