@@ -65,11 +65,9 @@ footer {
   nav, article {
     width: 100%;
     height: auto;
-
-
-
-
-  
+  }
+}
+ 
   /* Configurações Globais - Fundo Preto Absoluto */
   body {
     background-color: #000000;
